@@ -770,6 +770,105 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
+
+        .past-events {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.event-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.event-image {
+  position: relative;
+  height: 250px;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 20px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+.event-overlay h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+}
+
+.event-overlay p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.view-more-btn {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background: #1a252f;
+}
+
+@media (max-width: 768px) {
+  .event-gallery {
+    grid-template-columns: 1fr;
+  }
+}
         
         /* Contact Page Styles */
         .contact-container {
@@ -1066,6 +1165,7 @@
                     <li><a href="#" class="nav-link" data-page="program">Program</a></li>
                     <li><a href="#" class="nav-link" data-page="awards">Awards</a></li>
                     <li><a href="#" class="nav-link" data-page="registration">Registration</a></li>
+                    <li><a href="#" class="nav-link" data-page="Past Events ">Past Events </a></li>
                     <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
                 </ul>
             </nav>
@@ -2651,6 +2751,69 @@ UP, India</p>
     </div>
 </section>
 
+            <div class="past-events">
+  <h2 class="section-title">Our Past Events</h2>
+  <p class="section-subtitle">Relive the memorable moments from our previous gatherings</p>
+  
+  <div class="event-gallery">
+    <!-- Event 1 -->
+    <div class="event-card">
+      <div class="event-image">
+        <img src="https://i.ibb.co/6c86Yww9/1.png" alt="Past Event 1">
+        <div class="event-overlay">
+          <h3>Annual Conference 2023</h3>
+          <p>500+ attendees | Keynote speakers</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Event 2 -->
+    <div class="event-card">
+      <div class="event-image">
+        <img src="https://i.ibb.co/hRNGPRP8/3.png" alt="Past Event 2">
+        <div class="event-overlay">
+          <h3>Workshop Series</h3>
+          <p>Hands-on learning experience</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Event 3 -->
+    <div class="event-card">
+      <div class="event-image">
+        <img src="https://i.ibb.co/gNLDWzR/2.png" alt="Past Event 3">
+        <div class="event-overlay">
+          <h3>Networking Mixer</h3>
+          <p>Connecting professionals</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Event 4 -->
+    <div class="event-card">
+      <div class="event-image">
+        <img src="https://i.ibb.co/tpgxhGB2/4.png" alt="Past Event 4">
+        <div class="event-overlay">
+          <h3>Charity Gala</h3>
+          <p>Raised $50,000 for local causes</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Event 5 -->
+    <div class="event-card">
+      <div class="event-image">
+        <img src="https://i.ibb.co/sdRppmHn/5.png" alt="Past Event 5">
+        <div class="event-overlay">
+          <h3>Team Building</h3>
+          <p>Strengthening collaboration</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="view-more-btn">View All Past Events</button>
+</div>
 
     <!-- Contact Page -->
     <section id="contact" class="page">
